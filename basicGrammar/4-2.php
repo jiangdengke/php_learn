@@ -58,6 +58,6 @@ function runApp(Logger $logger): void{
 $console = new ConsoleLogger();
 runApp($console);
 
-$file = new FileLogger(__DIR__.'/app.log');
+$file = new FileLogger(__DIR__ . '/app.log');
 runApp($file);
 echo "Wrote to the console log file." . PHP_EOL;

@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 /** 1) 写入与追加：file_put_contents */
-$path = __DIR__.'/notes.txt';
+$path = __DIR__ . '/notes.txt';
 file_put_contents($path,"first line".PHP_EOL); // 覆盖写
 file_put_contents($path,"append line".PHP_EOL,FILE_APPEND); // 追加
 echo "wrote：$path",PHP_EOL;
@@ -16,7 +16,7 @@ echo "---content---",PHP_EOL,$content,PHP_EOL;
 
 /** 3) JSON 写入：json_encode（加选项，中文更友好） */
 $data = ['id' => 1, 'name' => 'Jiang', 'tags' => ['php','基础'], 'vip' => true];
-$jsonPath = __DIR__.'/data.json';
+$jsonPath = __DIR__ . '/data.json';
 file_put_contents($jsonPath,json_encode($data,JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
 echo "Wrote JSON: $jsonPath",PHP_EOL;
 
